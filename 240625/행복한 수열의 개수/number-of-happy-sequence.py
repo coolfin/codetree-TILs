@@ -15,10 +15,17 @@ res = 0
 for i in range(N):
     for j in range(len(arr[i]) - M + 1):
         p_arr = arr[i][j:j+M]
-        if find(p_arr): res += 1
+        if find(p_arr): 
+            res += 1
+            break
 
-        p_arr_90 = arr_90[i][j:j+M]
-        if find(p_arr_90): res+=1
+for i in range(N):
+    for j in range(len(arr_90[i]) - M + 1):
+        p_arr = arr_90[i][j:j+M]
+        if find(p_arr): 
+            res += 1
+            break
+
         
 
 print(res)
