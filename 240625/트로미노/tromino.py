@@ -9,9 +9,9 @@ res = float('-inf')
 
 #2번블럭
 for i in range(N):
-    for j in range(N-M+1):
-        row_total = sum(arr[i][j:j+M])
-        col_total = sum(arr_90[i][j:j+M])
+    for j in range(N-2):
+        row_total = sum(arr[i][j:j+2])
+        col_total = sum(arr_90[i][j:j+2])
 
         res = row_total if res < row_total else res
         res = col_total if res < col_total else res
