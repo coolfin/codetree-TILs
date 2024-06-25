@@ -11,10 +11,8 @@ res = float('-inf')
 for i in range(N):
     for j in range(M-2):
         row_total = sum(arr[i][j:j+3])
-        col_total = sum(arr_90[i][j:j+3])
-
         res = row_total if res < row_total else res
-        
+
 for i in range(M):
     for j in range(N-2):
         col_total = sum(arr_90[i][j:j+3])
