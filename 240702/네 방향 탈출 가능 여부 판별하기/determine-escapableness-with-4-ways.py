@@ -12,12 +12,13 @@ dy = [1, 0, -1, 0]
 deq = deque()
 deq.append([0,0])
 
+res = 0
 while deq:
     x, y = deq.popleft()
     visited[x][y] = True
     if x == N-1 and y == M-1:
-        print(1)
-        exit()
+        res = 1
+        break
 
     for i in range(4):
         cx = x+dx[i]
@@ -27,4 +28,4 @@ while deq:
 
         deq.append([cx,cy])
 
-print(0)
+print(res)
