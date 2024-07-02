@@ -22,6 +22,7 @@ for _ in range(K):
 
         if visited[x][y]: continue
         visited[x][y] = True
+        res += 1
 
         for i in range(4):
             cx = x + dx[i]
@@ -29,6 +30,5 @@ for _ in range(K):
 
             if 0<=cx<=N-1 and 0<=cy<=N-1 and not visited[cx][cy] and not arr[cx][cy]:
                 deq.append((cx,cy))
-                res += 1
         
 print(res)
